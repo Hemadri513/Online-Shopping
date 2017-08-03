@@ -20,7 +20,7 @@ private static List<Category> categories = new ArrayList<>();
 		Category category = new Category();
 		
 		category.setId(1);
-		category.setName("Mens");
+		category.setName("Men");
 		category.setDescription("this the some description for television");
 		category.setImageURL("image1.png");
 		
@@ -54,7 +54,7 @@ private static List<Category> categories = new ArrayList<>();
 	public List<Category> list() {
 		
 		
-		return null;
+		return categories;
 	}
 
 }
