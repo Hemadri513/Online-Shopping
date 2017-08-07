@@ -14,12 +14,10 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages={"Ecom.shopingbackend,dto"})
+@ComponentScan(basePackages={"Ecom.shopingbackend.dto"})
 @EnableTransactionManagement
-
 public class HibernateConfig {
 	
-	//
 	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
 	private final static String DATABASE_DRIVER = "org.h2.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
@@ -45,18 +43,17 @@ public class HibernateConfig {
 	}
 	
 	@Bean
-	public SessionFactory getSessionFactory(DataSource dataSource) {
+	public SessionFactory getSessionFactory(DataSource dataSource){
 		
-		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
+		LocalSessionFactoryBuilder builder=new LocalSessionFactoryBuilder(dataSource);
 		
 		builder.addProperties(getHibernateProperties());
 		builder.scanPackages("Ecom.shopingbackend.dto");
 		
-		
 		return builder.buildSessionFactory();
-		
-		
 	}
+	
+
 
 	/// all the hibernate properties will be returned in this method
 	private Properties getHibernateProperties() {
@@ -73,12 +70,9 @@ public class HibernateConfig {
 	}
 	
 	
-	//tarnasaction manager bean
 	@Bean
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
-		
-	 HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
-		
+		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
 		
 		return transactionManager;
 	}

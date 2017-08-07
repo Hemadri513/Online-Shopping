@@ -28,5 +28,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Hemadri/Downloads/hibernate-3.0.1.jar/hibernate-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

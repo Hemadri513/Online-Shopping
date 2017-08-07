@@ -1,6 +1,6 @@
 CREATE TABLE category (
 
-	id IDENITY,
+	id IDENTITY,
 	name VARCHAR(50),
 	description VARCHAR(255),
 	image_url VARCHAR(50),
@@ -10,6 +10,4 @@ CREATE TABLE category (
 
 
 );
-
-
 
