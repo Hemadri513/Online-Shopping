@@ -19,6 +19,11 @@
 
 
 					<c:if test="${userClickAllProducts == true}">
+						<script>
+							window.categoryId = '';
+						</script>
+						
+						
 						<ol class="breadcrumb">
 
 
@@ -29,6 +34,11 @@
 					</c:if>
 					
 					<c:if test="${userClickCategoryProducts == true}">
+					<script>
+						window.categoryId = '${category.id}';
+					
+					</script>
+					
 						<ol class="breadcrumb">
 
 
@@ -54,11 +64,28 @@
 				<table id="productListTable" class="table table-striped table-border">
 				
 				<thead>
-				
-					<th>S.No</th>
+				<tr>
+					<th></th>
 					<th>Name</th>
+					<th>Brand</th>
+					<th>Price</th>
+					<th>Qty. Available</th>
+					<th></th>
+					</tr>
 				</thead>
 				
+				<tfoot>
+				
+				<tr>
+				<th></th>
+					<th>Name</th>
+					<th>Brand</th>
+					<th>Price</th>
+					<th>Qty. Available</th>
+					</tr>
+					
+					
+				</tfoot>
 				
 				</table>
 				

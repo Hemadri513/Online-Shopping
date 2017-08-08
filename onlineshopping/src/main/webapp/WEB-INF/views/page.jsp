@@ -28,6 +28,9 @@
 
 <script>
 	window.menu = '${title}';
+	
+	window.contextRoot = '${contextRoot}';
+	
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -38,6 +41,10 @@
 
 <!-- bootstrap theme readable-->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+
+<!-- bootstrap theme readable-->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -92,9 +99,12 @@
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 		
-		<!-- datatable -->
+		<!-- datatable plugins-->
 		<script src="${js}/jquery.dataTables.js"></script>
 
+		<!-- datatable BootStrap script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- self coded javaScript -->
 		<script src="${js}/myapp.js"></script>
 
