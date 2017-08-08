@@ -10,10 +10,10 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.3.6.RELEASE</spring.version>
 		<hibernate.version>5.2.7.Final</hibernate.version>
+		<jackson.version>2.8.7</jackson.version>
 	</properties>
 
 	<dependencies>
@@ -47,16 +47,12 @@
 <!-- Hibernate Dependency -->
 
 	<dependency>
-	
 	<groupId>org.hibernate</groupId>
 	<artifactId>hibernate-core</artifactId>
 	<version>${hibernate.version}</version>
 	</dependency>
 
-
-
-
-
+	
 <!-- Database connection pooling -->
 
 <dependency>
@@ -64,6 +60,10 @@
     <artifactId>commons-dbcp2</artifactId>
     <version>2.1.1</version>
 </dependency>
+
+
+	
+	
 		
 	</dependencies>
 

@@ -3,38 +3,16 @@ package Ecom.shopingbackend.dto;
 import java.util.UUID;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Product {
 	
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private String code;
-	private String name;
-	private String brand;
-	private String description;
-	@Column(name = "unit_price")
-	private double unitPrice;
-	private int quantity;
-	@Column(name = "is_active")
-	private boolean active;
-	@Column(name = "category_id")
-	private int categoryId;
-	@Column(name = "supplier_id")
-	private int supplierId;
-	private int purchases;
-	private int views;
-	
-	public Product() {
-		this.code = "PRD" +UUID.randomUUID().toString().substring(26).toUpperCase();
-	}
-	
-	
-	
+
 	public int getId() {
 		return id;
 	}
@@ -107,6 +85,51 @@ public class Product {
 	public void setViews(int views) {
 		this.views = views;
 	}
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
+				+ description + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", active=" + active
+				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId + ", purchases=" + purchases + ", views="
+				+ views + "]";
+	}
+
+
+
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String code;
+	private String name;
+	private String brand;
+	private String description;
+	
+	@Column(name = "unit_price")
+	private double unitPrice;
+	
+	private int quantity;
+	
+	@Column(name = "is_active")
+	private boolean active;
+	
+	@Column(name = "category_id")
+	private int categoryId;
+	
+	@Column(name = "supplier_id")
+	private int supplierId;
+	
+	private int purchases;
+	private int views;
+	
+	public Product() {
+		this.code = "PRD" +UUID.randomUUID().toString().substring(26).toUpperCase();
+	}
+	
+		
 	
 
 }

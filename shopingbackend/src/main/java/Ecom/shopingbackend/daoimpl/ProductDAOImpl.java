@@ -1,5 +1,6 @@
 package Ecom.shopingbackend.daoimpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
@@ -23,6 +24,7 @@ public class ProductDAOImpl implements ProductDAO {
 	 * single
 	 * I
 	 */
+	private static List<Product> product = new ArrayList<>();
 	
 	
 	
@@ -145,7 +147,7 @@ public class ProductDAOImpl implements ProductDAO {
 		
 		return sessionFactory
 				.getCurrentSession()
-					.createQuery("FROM PRODUCT WHERE active = :active ORDER BY id", Product.class)
+					.createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
 						.setParameter("active", true)
 							.setFirstResult(0)
 								.setMaxResults(count)

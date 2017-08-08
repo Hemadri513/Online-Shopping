@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import Ecom.shopingbackend.dao.ProductDAO;
@@ -13,9 +14,10 @@ public class ProductTestCase {
 
 	private static AnnotationConfigApplicationContext context;
 	
+	@Autowired
 	private static ProductDAO productDAO;
 	
-	private Product product;
+/*	private Product product;*/
 	
 	@BeforeClass
 	public static void init() {
@@ -61,15 +63,35 @@ public class ProductTestCase {
 
 */
 	
-	
 	@Test
 	public void testListActiveProducts() {
+		assertEquals("Something went wrong while fetching the list of products!",
+				5,productDAO.listActiveProducts().size());
 		
+	}
 
-		assertEquals("Something went wrong while fetching the list of products!",5,productDAO.listActiveProducts().size());
+	@Test
+	public void testListActiveProductsByCategory() {
+		
+		assertEquals("Something went wrong while fetching the list of products!",3,productDAO.listActiveProductsByCategory(3).size());
+		
+		assertEquals("Something went wrong while fetching the list of products!",
+				2,productDAO.listActiveProductsByCategory(1).size());
+		
 		
 		
 	}
+
+	@Test
+	public void testGetLatestActiveProduct() {
+		
+		assertEquals("Something went wrong while fetching the list of products!",
+				3,productDAO.getLatestActiveProducts(3).size());
+		
 	
+	
+	}
+		
+
 }
 
