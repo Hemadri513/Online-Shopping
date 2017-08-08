@@ -30,15 +30,15 @@ CREATE TABLE user_details (
 );
 
 
-INSERT INTO user_detail
+INSERT INTO user_details
 (first_name, last_name,role, enabled, password, email, contact_number)
 VALUES ('Hemadri','yadav','ADMIN',true,'admin','hemadri.m513@gmail.com','8686167648');
 
-INSERT INTO user_detail
+INSERT INTO user_details
 (first_name, last_name,role, enabled, password, email, contact_number)
 VALUES ('bhagya','lakshmi','SUPPLIER',true,'12345','lakshmi.bhagya@gmail.com','9700990205');
 
-INSERT INTO user_detail
+INSERT INTO user_details
 (first_name, last_name,role, enabled, password, email, contact_number)
 VALUES ('yamini','p','SUPPLIER',true,'12345','yaminyams@gmail.com','123456789');
 
@@ -62,9 +62,21 @@ CREATE TABLE product (
 	purchases INT DEFAULT 0,
 	views INT DEFAULT 0,
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
-	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
-	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id),
+	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category(id),
+	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_details(id),
 
 );
 
+
+
+INSERT INTO product(code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('A11','T Shirt','adidas','banded mens shirt',800,5,true,3,2);
+INSERT INTO product(code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('A12','T Shirt','nike','banded mens shirt',750,2,true,3,3);
+INSERT INTO product(code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('A13','T Shirt','polo','banded mens shirt',900,5,true,3,2);
+INSERT INTO product(code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('B11','Saree','cavalli','womens sarees',6000,3,true,1,2);
+INSERT INTO product(code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('B12','Shirt','john','banded womens shirt',1200,5,true,1,3);
 

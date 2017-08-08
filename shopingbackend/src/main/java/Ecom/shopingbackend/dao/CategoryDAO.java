@@ -5,9 +5,6 @@ import java.util.List;
 import Ecom.shopingbackend.dto.Category;
 
 
-	
-
-
 public interface CategoryDAO {
 	
 	
