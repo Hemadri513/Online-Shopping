@@ -14,7 +14,7 @@
    	
    	">
    
-   <context:component-scan base-package="Ecom.onlineshopping.controller"/>
+   <context:component-scan base-package="Ecom.onlineshopping"/>
    <context:component-scan base-package="Ecom.shopingbackend"/>
    
    <bean id="viewResolver"
