@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -54,7 +54,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 
 	<div class="wrapper">
@@ -87,6 +86,12 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 
+		<!-- load only when user clicks show products-->
+			<c:if test="${userClickShowProduct == true }">
+				
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+		
 		</div>
 		<!-- footer comes here  -->
 		<%@include file="./shared/footer.jsp"%>
