@@ -23,7 +23,12 @@
    		<property name="prefix" value="/WEB-INF/views/" />
    		<property name="suffix" value=".jsp" />
    	
+   	<!-- id must be multi part resolver -->
    	</bean>
+   	
+   	<bean id="multipartResolver"
+   	class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+   	
    
    
    <!-- loading static resources -->

@@ -32,7 +32,9 @@
 					<!-- Form Elements -->
 
 					<sf:form class="form-horizontal" modelAttribute="product" 
-					action="${contextRoot}/manage/products" method="POST">
+					action="${contextRoot}/manage/products" method="POST"
+					enctype= "multipart/form-data"
+					>
 
 						<div class="form-group">
 							<label class="control-label col-md-4" for="name">Enter Product Name</label>
