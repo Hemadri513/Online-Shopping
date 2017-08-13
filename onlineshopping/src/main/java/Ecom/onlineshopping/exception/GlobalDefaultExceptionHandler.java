@@ -16,7 +16,7 @@ public class GlobalDefaultExceptionHandler {
 		
 		mv.addObject("errorTitle", "The page is not constructed!");
 		
-		mv.addObject("errorDescription", "The page you are looking for is not avialbe now! ");
+		mv.addObject("errorDescription", "The page you are looking for is not availble now! ");
 		
 		mv.addObject("title", "404 Error Page");
 		
