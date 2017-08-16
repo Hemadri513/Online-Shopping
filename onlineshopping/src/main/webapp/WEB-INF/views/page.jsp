@@ -46,6 +46,7 @@
 <!-- bootstrap theme readable-->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -116,6 +117,10 @@
 
 		<!-- datatable BootStrap script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		
+		<!--Boot box-->
+		<script src="${js}/bootbox.min.js"></script>
 		
 		<!-- self coded javaScript -->
 		<script src="${js}/myapp.js"></script>

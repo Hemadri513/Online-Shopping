@@ -58,7 +58,7 @@ public class ProductDAOImpl implements ProductDAO {
 					.createQuery("FROM Product", Product.class)
 						.getResultList();
 	}
-
+   
 	/*
 	 * 
 	 * INSERT
