@@ -16,4 +16,5 @@ public interface CategoryDAO {
 	boolean delete(Category category);
 
 
+	
 }
