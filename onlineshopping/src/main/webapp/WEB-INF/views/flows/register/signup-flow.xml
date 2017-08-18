@@ -6,6 +6,7 @@
 
 
 <var name="user" class="Ecom.shopingbackend.dto.User"/>
+<var name="billing" class="Ecom.shopingbackend.dto.Address"/>
 
 	<!-- is the start state -->
 	
@@ -13,9 +14,19 @@
 		<transition  on="billing" to="billing"/>
 	</view-state>
 
-	<view-state id="billing" view="flows/register/signup-billing"></view-state>
+	<view-state id="billing" view="flows/register/signup-billing" model="billing">
+	<transition  on="personal" to="personal"/>
+	<transition  on="confirm" to="confirm"/>
 	
-	<view-state id="confirm" view="flows/register/signup-confirm"></view-state>
+	</view-state>
+	
+	<view-state id="confirm" view="flows/register/signup-confirm">
+	
+	<transition  on="personal" to="personal"/>
+	<transition  on="billing" to="billing"/>
+	<transition  on="success" to="success"/>
+	
+	</view-state>
 	
 
 
