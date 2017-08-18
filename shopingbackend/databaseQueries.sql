@@ -20,7 +20,7 @@ CREATE TABLE user_detail (
 	last_name VARCHAR(50),
 	role VARCHAR(50),
 	enabled BOOLEAN,
-	password VARCHAR(50),
+	password VARCHAR(60),
 	email VARCHAR(100),
 	contact_number VARCHAR(15),	
 	CONSTRAINT pk_user_id PRIMARY KEY(id),
@@ -29,16 +29,20 @@ CREATE TABLE user_detail (
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Hemadri', 'yadav', 'ADMIN', true, 'admin', 'hemadri.m513@gmail.com', '8686167648');
+VALUES ('Hemadri', 'yadav', 'ADMIN', true, '$2a$06$0.aXhV6gtvMY4fBrj7paSeDE2Eax1qPrYozInvXDgwwQGODBBQYlS', 'hemadri.m513@gmail.com', '8686167648');
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('bhagya', 'lakshmi', 'SUPPLIER', true, '12345', 'lakshmi,bhagya@gmail.com', '9700990205');
+VALUES ('bhagya', 'lakshmi', 'SUPPLIER', true, '$2a$06$uxEiXVBTYpdynf9XbrEOv.hpE7wKABXMUxadCzZM0mYffdjVO9OIK', 'lakshmi,bhagya@gmail.com', '9700990205');
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('yamini', 'yams', 'SUPPLIER', true, '12345', 'yaminiyams@gmail.com', '7777777777');
+VALUES ('yamini', 'yams', 'USER', true, '$2a$06$XFREMaJG0N9qkykEJzBd8uaQEHn95wMhAKb44eboMvWEPLZHakw4G', 'yaminiyams@gmail.com', '7777777777');
 
+
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('Hemadri', 'lm', 'USER', true, '$2a$06$td/syhtTlHlZYMXPGrQrfuvlv/wUtzPrl7w3Tb..lJz.9R0ExxSES', 'hemadri.m744@gmail.com', '8125332191');
 
 CREATE TABLE product (
 	id IDENTITY,
