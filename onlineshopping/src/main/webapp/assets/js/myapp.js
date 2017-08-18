@@ -28,6 +28,20 @@ $(function() {
 	}
 
 	
+	// to tackel the csrf token
+	
+	
+	var token = $('meta[name="_csrf"]').attr('content');
+	var header = $('meta[name="_csrf_header"]').attr('content');
+	
+	if(token.length > 0 && header.length > 0) {
+		// set the token header for the ajax request
+		
+		$(document).ajaxSend(function(e, xhr, options) {
+			xhr.setRequestHeader(header,token);
+		});
+	}
+	
 	//code for jquery datatable
 
 	
@@ -314,32 +328,32 @@ var $adminProductsTable = $('#adminProductsTable');
 	
 	
 	
-	var $categoryForm = $('#categoryForm')
+	var $loginForm = $('#loginForm')
 	
-	if($categoryForm.length) {
-		$categoryForm.validate({
+	if($loginForm.length) {
+		$loginForm.validate({
 			
 			rules : {
 				
-				name : {
+				username : {
 					
 					required: true,
-					minlength: 2
+					email: true
 				},
 				
-				description: {
+				password: {
 					required: true
 				}
 			},
 			
 			messages : {
-				name : {
-					required : 'Please add the category name!',
-					minlength: 'The category name should not be less than 2 characters'
+				username : {
+					required : 'Please enter the User name!',
+					email: 'Please enter valid email address!'
 				},
 				
-				description: {
-					required: 'Please add a description for this category!'
+				password: {
+					required: 'Please enter the password!'
 				}
 			},
 			errorElement: 'em',
@@ -355,5 +369,58 @@ var $adminProductsTable = $('#adminProductsTable');
 	
 	
 	//-----------------
+	
+	
+	//--------------------------
+	// validation code for category
+
+
+
+var $categoryForm = $('#categoryForm')
+
+if($categoryForm.length) {
+	$categoryForm.validate({
+		
+		rules : {
+			
+			name : {
+				
+				required: true,
+				minlength: 2
+			},
+			
+			description: {
+				required: true
+			}
+		},
+		
+		messages : {
+			name : {
+				required : 'Please add the category name!',
+				minlength: 'The category name should not be less than 2 characters'
+			},
+			
+			description: {
+				required: 'Please add a description for this category!'
+			}
+		},
+		errorElement: 'em',
+		errorPlacement: function(error, element) {
+			
+			//add the class of help-block
+			error.addClass('help-block');
+			//add the error element after the input element
+			error.insertAfter(element);
+		}
+	});
+}
+
+
+//-----------------
+	
+	
+	
+	
+	
 	
 });
