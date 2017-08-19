@@ -3,7 +3,6 @@ package Ecom.shopingbackend.dao;
 import java.util.List;
 
 import Ecom.shopingbackend.dto.Address;
-import Ecom.shopingbackend.dto.Cart;
 import Ecom.shopingbackend.dto.User;
 
 public interface UserDAO {
@@ -28,7 +27,6 @@ public interface UserDAO {
 	
 	
 	
-	// update a cart
-	boolean updateCart(Cart cart);
+
 	
 }
