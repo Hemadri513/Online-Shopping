@@ -50,7 +50,7 @@ public class GlobalController {
 				
 				//set the usermodel in the session
 				
-				session.setAttribute("user", userModel);
+				session.setAttribute("userModel", userModel);
 				
 				return userModel;
 				
