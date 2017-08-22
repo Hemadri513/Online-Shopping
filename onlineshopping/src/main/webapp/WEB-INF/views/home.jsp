@@ -47,12 +47,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/A11.jpg" alt="" style="width:120px; height:110px;" >
                             <div class="caption">
-                                <h4 class="pull-right">$ </h4>
-                                <h4><a href="#">First Product</a>
+                                <h4 class="pull-right">&#8377; 450 </h4>
+                                <h4><a href="#">Rodid Men's Shirt</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>RODID stylish Black Dyed denim slim fit shirt is perfect for the casual outing.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -69,12 +69,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/PRD42F62F9098.jpg" alt="" style="width:120px; height:110px;" >
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
+                                <h4 class="pull-right">&#8377; 800</h4>
+                                <h4><a href="#">Polo Men's Shirt</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Polo slim fit shirt is perfect for the casual outing.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -91,12 +91,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/PRDFCCAC35C15.jpg" alt="" style="width:120px; height:110px;">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
+                                <h4 class="pull-right">&#8377; 900 </h4>
+                                <h4><a href="#">Polo Women's Shirt</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Polo slim fit shirt is perfect for the casual outing.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -113,12 +113,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/PRDF96B7DABAC.jpg" alt="" style="width:120px; height:110px;" >
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
+                                <h4 class="pull-right">&#8377; 1200</h4>
+                                <h4><a href="#">Denim</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>denim slim fit shirt is perfect for the casual outing.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -135,12 +135,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/PRDA2C017CF8C.jpg" alt="" style="width:120px; height:110px;">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
+                                <h4 class="pull-right">&#8377; 1500</h4>
+                                <h4><a href="#">Saree</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Graceful and gorgeous, This Blue and Golden Striped Pattern PolyCotton Silk material Saree for Indian Women</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
@@ -156,10 +156,10 @@
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
+                        <h4><a >For More items </a>
                         </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                        
+                        <a href="${contextRoot}/show/all/products" class="btn btn-primary" target="_blank">View More</a>
                     </div>
 
                 </div>
