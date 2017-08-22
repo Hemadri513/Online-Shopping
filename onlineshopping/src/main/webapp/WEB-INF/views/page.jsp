@@ -38,6 +38,7 @@
 
 
 <title>Online shopping- ${title}</title>
+<link rel="icon" type="image/png" href="${images}/logo1.png">
 
 <script>
 	window.menu = '${title}';
@@ -45,53 +46,7 @@
 	window.contextRoot = '${contextRoot}';
 	
 </script>
-<style>
-.fa {
-  padding: 10px;
-  font-size: 15px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-
-</style>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
