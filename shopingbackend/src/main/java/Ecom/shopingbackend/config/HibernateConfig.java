@@ -71,6 +71,7 @@ public class HibernateConfig {
 		return properties;
 	}
 	
+	;
 	
 	@Bean
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {

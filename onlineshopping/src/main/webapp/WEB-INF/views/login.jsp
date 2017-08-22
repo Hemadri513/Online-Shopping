@@ -47,20 +47,13 @@
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 <body>
 
 	<div class="wrapper">
-
-
-		<!-- Navigation -->
+	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 		<!-- brand and toggle get grouped for better mobile display -->
@@ -77,41 +70,28 @@
 		<div class="content">
 		
 		<div class="container">
-		<!-- this will be displayed if the credentials are wrong -->
-		
-		<c:if test="${not empty message}">
-		
-			<div class="row">
-				<div class="col-md-offset-3 col-md-6">
-				
-				<div class="alert alert-danger">${message}</div>
-				
-				
-				</div>
 			
-			</div>
-		
-		
-		</c:if>
-		
-		
-		<!-- this will be displayed only when user has logged out -->
+		<!-- this will be displayed if the credentials are wrong -->
+				<c:if test="${not empty message}">
+					<div class="row">
+						<div class="col-md-offset-3 col-md-6">
+							<div class="alert alert-danger">${message}</div>
+						</div>
+					</div>
+				</c:if>
+		<!-- alert message for wrong credentials -->
+
+	<!-- this will be displayed only when user has logged out -->
 		
 		<c:if test="${not empty logout}">
-		
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
-				
-				<div class="alert alert-success">${logout}</div>
-				
-				
+				<div class="alert alert-dismissible alert-success">${logout}</div>
 				</div>
-			
 			</div>
-		
-		
 		</c:if>
 		
+		<!-- Logout alert  -->
 		
 		<div class="row">
 		<div class="col-md-offset-3 col-md-6">
@@ -121,10 +101,9 @@
 		<h4>Login</h4>
 		</div>
 		<div class="panel-body">
-		<form action="${contextRoot}/login" method="POST" class="form-horizontal"
-		id="loginForm">
+		<form action="${contextRoot}/login" method="POST" class="form-horizontal" id="loginForm">
 		
-		<div class="form-group">
+		<div class="form-group has-success">
 		<label for="username" class="col-md-4 control-label">Email:</label>
 		<div class="col-md-8">
 		
@@ -132,7 +111,7 @@
 		</div>
 		</div>
 		
-		<div class="form-group">
+		<div class="form-group has-success">
 		<label for="password" class="col-md-4 control-label">Password:</label>
 		<div class="col-md-8">
 		
